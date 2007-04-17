@@ -1,6 +1,6 @@
 %define name deskbar-applet
-%define version 2.18.0
-%define release %mkrel 3
+%define version 2.18.1
+%define release %mkrel 1
 %define ffver %(rpm -q mozilla-firefox --queryformat %%{VERSION})
 %define seaver 1.1.1
 
@@ -25,7 +25,7 @@ BuildRequires: gnome-desktop-devel
 BuildRequires: automake1.9
 BuildRequires: gnome-common
 BuildRequires: intltool
-BuildRequires: gnome-doc-utils libxslt-proc
+BuildRequires: gnome-doc-utils
 BuildRequires: mozilla-firefox
 BuildRequires: python-beagle
 BuildRequires: scrollkeeper
@@ -89,5 +89,3 @@ rm -rf $RPM_BUILD_ROOT
 %_datadir/icons/hicolor/*/apps/*
 %dir %_datadir/omf/*/
 %_datadir/omf/*/*-C.omf
-
-
