@@ -1,8 +1,8 @@
 %define name deskbar-applet
 %define version 2.19.3
-%define release %mkrel 1
+%define release %mkrel 2
 %define ffver %(rpm -q mozilla-firefox --queryformat %%{VERSION})
-%define seaver 1.1.1
+%define seaver 1.1.2
 
 %define _requires_exceptions pkgconfig\(.*\)
 
