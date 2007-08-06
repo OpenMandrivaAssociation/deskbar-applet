@@ -1,8 +1,8 @@
 %define name deskbar-applet
-%define version 2.19.5
-%define release %mkrel 2
+%define version 2.19.6
+%define release %mkrel 1
 %define ffver %(rpm -q mozilla-firefox --queryformat %%{VERSION})
-%define seaver 1.1.3
+%define seaver 1.1.4
 
 %define _requires_exceptions pkgconfig\(.*\)
 
@@ -11,7 +11,7 @@ Name: %{name}
 Version: %{version}
 Release: %{release}
 Source0: http://ftp.gnome.org/pub/GNOME/sources/deskbar-applet/%{name}-%{version}.tar.bz2
-Patch1: deskbar-applet-2.17.5-firefox-version.patch
+Patch1: deskbar-applet-2.17.6-firefox-version.patch
 License: GPL
 Group: Graphical desktop/GNOME
 Url: http://live.gnome.org/DeskbarApplet
