@@ -1,7 +1,6 @@
 %define name deskbar-applet
 %define version 2.19.6
 %define release %mkrel 1
-%define ffver %(rpm -q mozilla-firefox --queryformat %%{VERSION})
 %define seaver 1.1.4
 
 %define _requires_exceptions pkgconfig\(.*\)
@@ -11,7 +10,8 @@ Name: %{name}
 Version: %{version}
 Release: %{release}
 Source0: http://ftp.gnome.org/pub/GNOME/sources/deskbar-applet/%{name}-%{version}.tar.bz2
-Patch1: deskbar-applet-2.17.6-firefox-version.patch
+Patch1: deskbar-applet-2.17.6-seamonkey.patch
+Patch2: deskbar-applet-2.19.6-evo.patch
 License: GPL
 Group: Graphical desktop/GNOME
 Url: http://live.gnome.org/DeskbarApplet
@@ -36,7 +36,7 @@ Requires: gnome-python-applet
 Requires: python-beagle beagle-gui
 Requires: python-elementtree
 Requires: dbus-python
-Requires: %mklibname mozilla-firefox %ffver 
+Requires: libmozilla-firefox
 Requires(post): scrollkeeper
 Requires(postun): scrollkeeper
 
@@ -47,8 +47,8 @@ It supports the search in Beagle, Mozilla Firefox and Epiphany.
 
 %prep
 %setup -q
-%patch1 -p1 -b .firefox
-perl -pi -e "s/MOZILLA_FIREFOX_VERSION/%ffver/" deskbar/handlers/mozilla.py
+%patch1 -p1 -b .seamonkey
+%patch2 -p1
 perl -pi -e "s/SEAMONKEY_VERSION/%seaver/" deskbar/handlers/mozilla.py
 
 %build
@@ -60,6 +60,9 @@ rm -rf $RPM_BUILD_ROOT %name.lang
 %makeinstall_std
 %find_lang %name
 %find_lang deskbar --with-gnome
+for omf in %buildroot%_datadir/omf/*/*-??*.omf;do 
+echo "%lang($(basename $omf|sed -e s/.*-// -e s/.omf//)) $(echo $omf|sed -e s!%buildroot!!)" >> %name.lang
+done
 cat deskbar.lang >> %name.lang
 
 %clean
