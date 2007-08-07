@@ -1,5 +1,5 @@
 %define name deskbar-applet
-%define version 2.19.6
+%define version 2.19.6.1
 %define release %mkrel 1
 %define seaver 1.1.4
 
@@ -11,7 +11,6 @@ Version: %{version}
 Release: %{release}
 Source0: http://ftp.gnome.org/pub/GNOME/sources/deskbar-applet/%{name}-%{version}.tar.bz2
 Patch1: deskbar-applet-2.17.6-seamonkey.patch
-Patch2: deskbar-applet-2.19.6-evo.patch
 License: GPL
 Group: Graphical desktop/GNOME
 Url: http://live.gnome.org/DeskbarApplet
@@ -48,7 +47,6 @@ It supports the search in Beagle, Mozilla Firefox and Epiphany.
 %prep
 %setup -q
 %patch1 -p1 -b .seamonkey
-%patch2 -p1
 perl -pi -e "s/SEAMONKEY_VERSION/%seaver/" deskbar/handlers/mozilla.py
 
 %build
