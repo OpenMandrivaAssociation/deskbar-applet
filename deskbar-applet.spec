@@ -1,6 +1,6 @@
 %define name deskbar-applet
 %define version 2.19.92
-%define release %mkrel 2
+%define release %mkrel 3
 
 %define _requires_exceptions pkgconfig\(.*\)
 
@@ -34,12 +34,12 @@ Requires: gnome-python-extras
 Requires: gnome-python-gnomevfs
 Requires: gnome-python-gconf
 Requires: gnome-python-applet
-Requires: python-beagle beagle-gui
 Requires: python-elementtree
 Requires: dbus-python
-Requires: libmozilla-firefox
 Requires(post): scrollkeeper
 Requires(postun): scrollkeeper
+Suggests: python-beagle beagle-gui
+Suggests: libmozilla-firefox
 
 %description
 The Deskbar is an all-in-one search bar. It is a Linux/Gnome panel
