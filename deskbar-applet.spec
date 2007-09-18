@@ -1,6 +1,6 @@
 %define name deskbar-applet
-%define version 2.19.92
-%define release %mkrel 3
+%define version 2.20.0
+%define release %mkrel 1
 
 %define _requires_exceptions pkgconfig\(.*\)
 
@@ -10,9 +10,6 @@ Version: %{version}
 Release: %{release}
 Source0: http://ftp.gnome.org/pub/GNOME/sources/deskbar-applet/%{name}-%{version}.tar.bz2
 Patch1: deskbar-applet-2.19.90.1-seamonkey.patch
-#gw svn patches
-Patch2: deskbar-applet-1634-fix-evolution-addressbook-search.patch
-Patch3: deskbar-applet-1635-fix-gdm-logout-action.patch
 License: GPL
 Group: Graphical desktop/GNOME
 Url: http://live.gnome.org/DeskbarApplet
@@ -49,8 +46,6 @@ It supports the search in Beagle, Mozilla Firefox and Epiphany.
 %prep
 %setup -q
 %patch1 -p1 -b .seamonkey
-%patch2 -p1
-%patch3 -p1
 
 %build
 %configure2_5x --disable-scrollkeeper
