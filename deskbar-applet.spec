@@ -20,6 +20,7 @@ BuildRequires: gnome-python-extras
 BuildRequires: gnome-python-applet
 BuildRequires: evolution-data-server-devel
 BuildRequires: gnome-desktop-devel
+BuildRequires: dbus-python
 BuildRequires: automake1.9
 BuildRequires: gnome-common
 BuildRequires: intltool
