@@ -17,6 +17,7 @@ BuildRequires: gtk+2-devel
 BuildRequires: pygtk2.0-devel
 BuildRequires: gnome-python-extras
 BuildRequires: gnome-python-applet
+BuildRequires: gnome-python-devel
 BuildRequires: evolution-data-server-devel
 BuildRequires: gnome-desktop-devel
 BuildRequires: dbus-python
