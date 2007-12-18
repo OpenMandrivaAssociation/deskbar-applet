@@ -25,6 +25,7 @@ BuildRequires: automake1.9
 BuildRequires: gnome-common
 BuildRequires: intltool
 BuildRequires: gnome-doc-utils
+BuildRequires: gnome-python-devel
 BuildRequires: mozilla-firefox
 BuildRequires: python-beagle
 BuildRequires: scrollkeeper
