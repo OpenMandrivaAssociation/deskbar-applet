@@ -13,6 +13,7 @@ Patch1: deskbar-applet-2.21.3-seamonkey.patch
 License: GPL
 Group: Graphical desktop/GNOME
 Url: http://live.gnome.org/DeskbarApplet
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: gtk+2-devel
 BuildRequires: pygtk2.0-devel
 BuildRequires: gnome-python-extras
