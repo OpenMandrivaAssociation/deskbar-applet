@@ -30,6 +30,7 @@ BuildRequires: gnome-python-devel
 BuildRequires: mozilla-firefox
 BuildRequires: python-beagle
 BuildRequires: scrollkeeper
+BuildRequires: chrpath
 Requires: gnome-python-extras
 Requires: gnome-python-gnomevfs
 Requires: gnome-python-gconf
@@ -63,6 +64,8 @@ for omf in %buildroot%_datadir/omf/*/*-??*.omf;do
 echo "%lang($(basename $omf|sed -e s/.*-// -e s/.omf//)) $(echo $omf|sed -e s!%buildroot!!)" >> %name.lang
 done
 cat deskbar.lang >> %name.lang
+
+find  %buildroot -name \*.so |xargs chrpath -d
 
 %clean
 rm -rf $RPM_BUILD_ROOT
