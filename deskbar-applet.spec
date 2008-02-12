@@ -25,7 +25,7 @@ BuildRequires: dbus-python
 BuildRequires: automake1.9
 BuildRequires: gnome-common
 BuildRequires: intltool
-BuildRequires: gnome-doc-utils
+BuildRequires: gnome-doc-utils docbook-dtd42-xml
 BuildRequires: gnome-python-devel
 BuildRequires: mozilla-firefox
 BuildRequires: python-beagle
