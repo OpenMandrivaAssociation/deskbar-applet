@@ -1,5 +1,5 @@
 %define name deskbar-applet
-%define version 2.21.91
+%define version 2.21.92
 %define release %mkrel 1
 
 %define _requires_exceptions pkgconfig\(.*\)
@@ -9,7 +9,7 @@ Name: %{name}
 Version: %{version}
 Release: %{release}
 Source0: http://ftp.gnome.org/pub/GNOME/sources/deskbar-applet/%{name}-%{version}.tar.bz2
-Patch1: deskbar-applet-2.21.3-seamonkey.patch
+Patch1: deskbar-applet-2.21.92-seamonkey.patch
 License: GPL
 Group: Graphical desktop/GNOME
 Url: http://live.gnome.org/DeskbarApplet
