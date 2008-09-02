@@ -9,6 +9,8 @@ Name: %{name}
 Version: %{version}
 Release: %{release}
 Source0: http://ftp.gnome.org/pub/GNOME/sources/deskbar-applet/%{name}-%{version}.tar.bz2
+#gw in iurt on x86_64, the configure check fails
+Patch: deskbar-applet-2.23.91-disable-gnomeapplet-check.patch
 Patch1: deskbar-applet-2.21.92-seamonkey.patch
 License: GPLv2+
 Group: Graphical desktop/GNOME
@@ -49,7 +51,11 @@ It supports the search in Beagle, Mozilla Firefox and Epiphany.
 
 %prep
 %setup -q
+%patch -p1
 %patch1 -p1 -b .seamonkey
+aclocal -I m4
+autoconf
+automake
 
 %build
 %configure2_5x --disable-scrollkeeper
