@@ -32,7 +32,6 @@ BuildRequires: python-beagle
 BuildRequires: scrollkeeper
 BuildRequires: chrpath
 Requires: gnome-python-extras
-Requires: gnome-python-gnomevfs
 Requires: gnome-python-gconf
 Requires: gnome-python-applet
 Requires: python-elementtree
