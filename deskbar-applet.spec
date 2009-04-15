@@ -1,6 +1,6 @@
 %define name deskbar-applet
 %define version 2.26.1
-%define release %mkrel 1
+%define release %mkrel 2
 
 %define _requires_exceptions pkgconfig\(.*\)
 
@@ -88,6 +88,7 @@ rm -rf $RPM_BUILD_ROOT
 %_libdir/bonobo/servers/*
 %_libdir/%name/
 %py_puresitedir/*deskbar*
+%py_platsitedir/*deskbar*
 %_libdir/pkgconfig/%name.pc
 %_datadir/%name
 %_datadir/icons/hicolor/*/apps/*
