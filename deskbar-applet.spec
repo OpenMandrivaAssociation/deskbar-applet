@@ -1,6 +1,6 @@
 %define name deskbar-applet
 %define version 2.26.1
-%define release %mkrel 2
+%define release %mkrel 3
 
 %define _requires_exceptions pkgconfig\(.*\)
 
@@ -22,7 +22,6 @@ BuildRequires: gnome-python-devel
 BuildRequires: evolution-data-server-devel
 BuildRequires: gnome-desktop-devel
 BuildRequires: dbus-python
-BuildRequires: automake1.9
 BuildRequires: gnome-common
 BuildRequires: intltool
 BuildRequires: gnome-doc-utils docbook-dtd42-xml
@@ -56,7 +55,7 @@ It supports the search in Beagle, Mozilla Firefox and Epiphany.
 
 %install
 rm -rf $RPM_BUILD_ROOT %name.lang
-%makeinstall_std
+%makeinstall_std pythondir=%py_platsitedir
 %find_lang %name
 %find_lang deskbar --with-gnome
 for omf in %buildroot%_datadir/omf/*/*-??*.omf;do 
@@ -87,7 +86,6 @@ rm -rf $RPM_BUILD_ROOT
 %_sysconfdir/gconf/schemas/deskbar-applet.schemas
 %_libdir/bonobo/servers/*
 %_libdir/%name/
-%py_puresitedir/*deskbar*
 %py_platsitedir/*deskbar*
 %_libdir/pkgconfig/%name.pc
 %_datadir/%name
