@@ -1,6 +1,6 @@
 %define name deskbar-applet
-%define version 2.26.1
-%define release %mkrel 3
+%define version 2.27.1
+%define release %mkrel 1
 
 %define _requires_exceptions pkgconfig\(.*\)
 
