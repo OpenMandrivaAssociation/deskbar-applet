@@ -1,6 +1,6 @@
 %define name deskbar-applet
 %define version 2.28.0
-%define release %mkrel 1
+%define release %mkrel 2
 
 %define _requires_exceptions pkgconfig\(.*\)
 
@@ -27,7 +27,9 @@ BuildRequires: intltool
 BuildRequires: gnome-doc-utils docbook-dtd42-xml
 BuildRequires: gnome-python-devel
 BuildRequires: mozilla-firefox
+%ifnarch %arm %mips
 BuildRequires: python-beagle
+%endif
 BuildRequires: scrollkeeper
 BuildRequires: chrpath
 Requires: gnome-python-extras
@@ -37,7 +39,9 @@ Requires: python-elementtree
 Requires: dbus-python
 Requires(post): scrollkeeper
 Requires(postun): scrollkeeper
+%ifnarch %arm %mips
 Suggests: python-beagle beagle-gui
+%endif
 Suggests: libmozilla-firefox
 
 %description
