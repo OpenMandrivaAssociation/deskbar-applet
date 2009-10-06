@@ -1,6 +1,6 @@
 %define name deskbar-applet
 %define version 2.28.0
-%define release %mkrel 2
+%define release %mkrel 3
 
 %define _requires_exceptions pkgconfig\(.*\)
 
@@ -86,7 +86,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %name.lang
 %defattr(-,root,root)
-%doc README NEWS TODO ChangeLog AUTHORS
+%doc README NEWS TODO AUTHORS
 %_sysconfdir/gconf/schemas/deskbar-applet.schemas
 %_libdir/bonobo/servers/*
 %_libdir/%name/
