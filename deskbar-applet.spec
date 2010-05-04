@@ -48,7 +48,7 @@ It supports the search in Mozilla Firefox and Epiphany.
 %patch1 -p1 -b .seamonkey
 
 %build
-%configure2_5x --disable-scrollkeeper
+%configure2_5x --disable-scrollkeeper --disable-schemas-install
 %make
 
 %install
