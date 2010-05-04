@@ -27,9 +27,6 @@ BuildRequires: intltool
 BuildRequires: gnome-doc-utils docbook-dtd42-xml
 BuildRequires: gnome-python-devel
 BuildRequires: mozilla-firefox
-%ifnarch %arm %mips
-BuildRequires: python-beagle
-%endif
 BuildRequires: scrollkeeper
 BuildRequires: chrpath
 Requires: gnome-python-extras
@@ -39,15 +36,12 @@ Requires: python-elementtree
 Requires: dbus-python
 Requires(post): scrollkeeper
 Requires(postun): scrollkeeper
-%ifnarch %arm %mips
-Suggests: python-beagle beagle-gui
-%endif
 Suggests: libmozilla-firefox
 
 %description
 The Deskbar is an all-in-one search bar. It is a Linux/Gnome panel
 applet that is similar to Google's (Windows only) Deskbar
-It supports the search in Beagle, Mozilla Firefox and Epiphany.
+It supports the search in Mozilla Firefox and Epiphany.
 
 %prep
 %setup -q
