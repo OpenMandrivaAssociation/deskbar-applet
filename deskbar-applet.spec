@@ -52,7 +52,7 @@ It supports the search in Mozilla Firefox and Epiphany.
 %make
 
 %install
-rm -rf $RPM_BUILD_ROOT %name.lang
+rm -rf %{buildroot} %name.lang
 %makeinstall_std pythondir=%py_platsitedir
 %find_lang %name
 %find_lang deskbar --with-gnome
@@ -64,7 +64,7 @@ cat deskbar.lang >> %name.lang
 find  %buildroot -name \*.so |xargs chrpath -d
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %post
 %post_install_gconf_schemas %name
