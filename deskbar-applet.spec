@@ -12,7 +12,7 @@ Source0: http://ftp.gnome.org/pub/GNOME/sources/deskbar-applet/%{name}-%{version
 Patch1: deskbar-applet-2.25.3-seamonkey.patch
 License: GPLv2+
 Group: Graphical desktop/GNOME
-Url: http://live.gnome.org/DeskbarApplet
+Url: https://live.gnome.org/DeskbarApplet
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: gtk+2-devel
 BuildRequires: pygtk2.0-devel
